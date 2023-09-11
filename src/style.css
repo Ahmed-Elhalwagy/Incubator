@@ -6,14 +6,14 @@
 
 body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000;
+  color: #FFF;
+  padding:  30px 60px;
   background-image: url('/Home-bg.jpg');
   background-size:cover;
   background-position: center;   
   background-repeat: no-repeat;
-  color: #FFF;
-  padding:  30px 60px;
 }
-
 
 img {
   width: 100%;
@@ -213,4 +213,111 @@ width: 55%;
   .section .main .box-container .box p {
     font-size: 0.9rem;
   }
+}
+
+.portfolio .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.portfolio .main h1{
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 40px;
+  width: 80%;
+}
+
+.portfolio .main h1 span {
+  color: #e63946;
+}
+
+.portfolio .main h3 {
+  font-size: 2rem;
+  align-self: self-start;
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.portfolio .main .products-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.portfolio .main .products-container .box {
+  /* border: 1px solid #fff; */
+  padding: 15px;
+  width: 400px;
+  height: fit-content;
+  background-color: #e63946;
+}
+.portfolio .main .products-container .box h4 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+.portfolio .main .products-container .box p{
+  font-size: 1.3rem;
+  margin-top: 10px;
+
+}
+
+.portfolio .main .products-container .box .btn {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.portfolio .main .products-container .box .btn:hover {
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+.portfolio .main .products-container .box .btn a {
+  text-decoration: none;  
+  font-weight: 600;
+  color: #fff;
+}
+
+.portfolio .main .products-container .box .btn:hover a{
+  color: #e63946;
+}
+
+@media (max-width: 800px){
+.portfolio .main h1{
+font-size: 2rem;
+width: 90%;
+}
+
+.portfolio .main h3 {
+  font-size: 1.5rem;
+}
+
+.portfolio .main .products-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio .main .products-container .box{
+  width: 100%;
+}
+}
+
+@media (max-width: 500px){
+  .portfolio .main h1{
+    font-size: 1.5rem;
+    width: 90%;
+    }
+    
 }
