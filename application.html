@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <link rel="stylesheet" href="./src/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incubator || Home</title>
+  </head>
+  <body>
+
+    <header class="header">
+        <nav class="nav">
+            <h3>Incubator</h3>
+            <ul>
+                <a href="/">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="sign-up.html">Sign up</a>
+                <a href="login.html">Login</a>
+
+            </ul>
+            <h4 class="application"><a href="/application.html">Application</a></h4>
+            <img class="nav-icon" src="/Hamburger_icon.png" alt="menu"/>
+        </nav>
+        
+        <div class="mobile-nav hidden">
+            <ul>
+                <a href="/">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="application.html">Application</a>
+                <a href="sign-up.html">Sign up</a>
+                <a href="login.html">Login</a>
+            </ul>
+        </div>
+        
+    </header>
+
+    <section class="application">
+        <main class="main">
+            <h1><span>An idea is worth nothing</span> 
+                until it is executed. Are you ready to Build it?
+                </h1>    
+        <form class="form" id="application">
+            <div class="left">
+                <div class="box">
+                    <label for="startup_Name" >Startup Name</label>
+                    <input type="text" id="startup_Name" required/>
+                </div>
+                <div class="box">
+                    <label for="founder_details" >Founder Details</label>
+                    <input type="text" id="founder_details" required/>
+                </div>
+                <div class="box">
+                    <label for="location" >Location</label>
+                    <input type="text" id="location" required/>
+                </div>
+                <div class="box">
+                    <label for="stage" >What is the current stage of your company?</label>
+                    <input type="text" id="stage" required/>
+                </div>
+                <div class="box">
+                    <label for="focus" >Customer Focus</label>
+                    <input type="text" id="focus" required/>
+                </div>
+                <div class="box">
+                    <label for="tagline" >Company tagline - your company in 5 words</label>
+                    <input type="text" id="tagline" required/>
+                </div>
+            </div>
+            <div class="right">
+                <div class="box">
+                    <label for="email" >Email</label>
+                    <input type="email" id="email" required/>
+                </div>
+         
+                <div class="box">
+                    <label for="website" >Website</label>
+                    <input type="url" id="website" required/>
+                </div>
+
+                <div class="box">
+                    <label for="date" >Founding Date</label>
+                    <input type="date" id="date" required/>
+                </div>
+            <div class="box">
+                <label for="problem" >What problem are you solving?</label>
+                <input type="text" id="problem" required/>
+            </div>
+        <div class="box">
+            <label for="competitors" >Your competitors</label>
+            <input type="text" id="competitorst" required/>
+        </div>
+   
+        <div class="box">
+            <label for="need_support" >Top 3 things you need support with?</label>
+            <input type="text" id="need_support" required   />
+        </div>
+    </div>  
+</form>
+<button class="btn" form="application">Submit</button>
+    </main>
+
+    </section>
+    <script type="module" src="/main.js"></script>
+
+    </body>

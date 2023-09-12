@@ -30,7 +30,7 @@ img {
 }
 
 .header .nav h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #e63946;
 }
 
@@ -41,7 +41,7 @@ img {
 }
 
 .header .nav ul a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #FFF;
   cursor: pointer;
@@ -54,12 +54,20 @@ img {
 
 .header .nav h4 {
   color: #000;
-  font-size: 1.3rem;
+  font-size: 1rem;
   background: #e63946;
   border-radius: 4px;
   padding: 10px;
   cursor: pointer;
   transition: all 0.5s;
+}
+
+.header .nav h4 a{
+  text-decoration: none;
+}
+
+.header .nav h4 a:visited{
+  color: #FFF;
 }
 
 .header .nav h4:hover {
@@ -100,25 +108,42 @@ img {
   color: #FFF;
 }
 
-.section {
+section {
   padding: 20px;
 }
 
-.section .main {
+label{
+  font-size: 1.2rem;
+}
+input{
+  outline: none;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  background: none;
+  color: #FFF;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+input:focus{
+  border: 1px solid #e63946;
+} 
+
+section .main {
   display: flex;
   flex-direction: column;
   
 }
 
+
 .section .main h1 {
-margin-top: 30px;
-font-size: 4rem;
-font-weight: 700;
-width: 55%;
+  margin-top: 30px;
+  font-size: 4rem;
+  font-weight: 700;
+  width: 55%;
 }
 
-.section .main .box-container{
-  margin-top: 20px;
+.section .main .box-container{  margin-top: 20px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -133,14 +158,13 @@ width: 55%;
   font-size: 1.2rem;
 }
 
-.section .main .box-container .box .title{
-  text-decoration: underline;
+.section .main .box-container .box .title{  text-decoration: underline;
   font-size: 1.5rem;
 }
-.section .main .box-container .box p {
+section .main .box-container .box p {
   margin: 15px 0;
 }
-.section .main .box-container .box .btn {
+section .main .box-container .box .btn {
   outline: none ;
   font-size: 1.2rem;
   background: #000;
@@ -152,8 +176,7 @@ width: 55%;
 
 }
 
-.section .main .box-container .box .btn-no {
-  outline: none ;
+.section .main .box-container .box .btn-no {  outline: none ;
   background: none;
   border: none;
   font-size: 1.2rem;
@@ -165,23 +188,24 @@ width: 55%;
 
 
 @media (max-width: 1200px){
-  .section .main h1 {
+  section .main h1 {
     width: 100%;
+      font-size: 2rem;
   }
 }
 
-@media (max-width: 900px){
+@media (max-width: 991px){
   body {
     padding: 20px;
   }
-
-  .section .main {
-    align-items: center;
+  .section .main h1 {
+    width: 90%;
+  }
+  .section .main {    align-items: center;
     justify-content: center;
   }
 
-  .section .main h1{
-    font-size: 3rem;
+  .section .main h1{    font-size: 3rem;
     text-align: center;
   }
 
@@ -195,27 +219,29 @@ width: 55%;
     display: block;
   }
 
-  .section .main h1{
-    margin-top: 20px;
+  .section .main h1{    margin-top: 20px;
   }
-  .section .main .box-container{
+  section .main .box-container{
       flex-direction: column;
   }
-  .section .main .box-container .box{
+  section .main .box-container .box{
     width: 100%;
   }
+.section .main .box-container .box {
+  width: 90%;
+}
 }
 
 @media (max-width: 500px){
-  .section .main h1{
+  section .main h1{
     font-size: 2rem;
   }
-  .section .main .box-container .box p {
+  section .main .box-container .box p {
     font-size: 0.9rem;
   }
 }
 
-.portfolio .main {
+section .main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,18 +249,18 @@ width: 55%;
   width: 100%;
 }
 
-.portfolio .main h1{
+section .main h1{
   font-size: 2.8rem;
   text-align: center;
   margin-top: 40px;
   width: 80%;
 }
 
-.portfolio .main h1 span {
+section .main h1 span {
   color: #e63946;
 }
 
-.portfolio .main h3 {
+section .main h3 {
   font-size: 2rem;
   align-self: self-start;
   text-decoration: underline;
@@ -242,7 +268,7 @@ width: 55%;
   margin-bottom: 10px;
 }
 
-.portfolio .main .products-container {
+section .main .products-container {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -250,24 +276,24 @@ width: 55%;
   width: 100%;
 }
 
-.portfolio .main .products-container .box {
+section .main .products-container .box {
   /* border: 1px solid #fff; */
   padding: 15px;
   width: 400px;
   height: fit-content;
   background-color: #e63946;
 }
-.portfolio .main .products-container .box h4 {
+section .main .products-container .box h4 {
   font-size: 1.5rem;
   text-decoration: underline;
 }
-.portfolio .main .products-container .box p{
+section .main .products-container .box p{
   font-size: 1.3rem;
   margin-top: 10px;
 
 }
 
-.portfolio .main .products-container .box .btn {
+section .main .products-container .box .btn {
   outline: none;
   border: none;
   background: none;
@@ -278,46 +304,247 @@ width: 55%;
   margin-top: 20px;
   cursor: pointer;
 }
-.portfolio .main .products-container .box .btn:hover {
+section .main .products-container .box .btn:hover {
   background-color: #fff;
   transition: all 0.5s;
 }
 
-.portfolio .main .products-container .box .btn a {
+section .main .products-container .box .btn a {
   text-decoration: none;  
   font-weight: 600;
   color: #fff;
 }
 
-.portfolio .main .products-container .box .btn:hover a{
+section .main .products-container .box .btn:hover a{
   color: #e63946;
 }
 
 @media (max-width: 800px){
-.portfolio .main h1{
+section .main h1{
 font-size: 2rem;
 width: 90%;
 }
 
-.portfolio .main h3 {
+section .main h3 {
   font-size: 1.5rem;
 }
 
-.portfolio .main .products-container {
+section .main .products-container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.portfolio .main .products-container .box{
+section .main .products-container .box{
   width: 100%;
 }
 }
 
 @media (max-width: 500px){
-  .portfolio .main h1{
+  section .main h1{
     font-size: 1.5rem;
     width: 90%;
     }
     
+}
+
+.application .main h1 {
+  text-align: center;
+  width: 60%;
+  letter-spacing: 1px;
+}
+
+.application .main .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.application .main .form div{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.application .main .form .box {
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.application .main .form .box label{
+  font-size: 1.2rem;
+}
+.application .main .form .box input{
+  outline: none;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  background: none;
+  color: #FFF;
+  padding: 10px;
+}
+
+.application .main .form .box input:focus{
+  border: 1px solid #e63946;
+} 
+
+.application .main .btn {
+  color: #FFF;
+  border: 1px solid #e63946;
+  padding: 10px 40px;
+  border-radius: 15px;
+  outline: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.4s all;
+  margin-top: 15px;
+}
+.application .main .btn:hover {
+  background: #ff0000;
+  border: none;
+}
+
+@media (max-width: 992px){
+  .application .main h1 {
+    width: 90%;
+    margin-top: 10px;
+  }
+  .application .main .form {
+    flex-direction: column;
+  }
+.application .main .form .box label{
+  font-size: 1rem;
+}
+.application .main .btn {
+  font-size: 1.2rem;
+}
+
+}
+
+.contact-us .main {
+  width: 100%;
+}
+
+.contact-us .main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+
+.contact-us .main form .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 60%;
+  gap: 5px;
+}
+
+.contact-us .main form .box label{
+  font-size: 1.2rem;
+}
+.contact-us .main form .box input{
+  outline: none;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  background: none;
+  color: #FFF;
+  padding: 10px;
+}
+
+.contact-us .main form .box input[name="message"]{
+  line-height: 4em;
+}
+
+.contact-us .main form .box input:focus{
+  border: 1px solid #e63946;
+} 
+
+.contact-us .main form .btn {
+  color: #FFF;
+  border: 1px solid #e63946;
+  padding: 10px 40px;
+  border-radius: 20px;
+  outline: none;
+  background: none;
+  font-size: 1.5rem;
+  align-self: flex-start;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.contact-us .main form .btn:hover {
+  background: #ff0000;
+  border: none;
+}
+
+
+@media (max-width: 768px){
+  .contact-us .main form {
+    align-items: center;
+  padding-left: 0;  
+  }
+  .contact-us .main form .box{
+    width:100% ;
+  }
+.contact-us .main form .btn {
+  font-size: 1rem;
+
+}
+}
+
+
+.sign .main .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 50px;
+  height: 100%;
+  width: 100%;
+}
+.sign .main .form .box{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sign .main .form .btn {
+  color: #FFF;
+  border: 1px solid #e63946;
+  padding: 10px 40px;
+  border-radius: 15px;
+  outline: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.sign .main .form .btn:hover {
+  background: #ff0000;
+  border: none;
+}
+
+@media (max-width: 900px){
+  .sign .main .form .box{
+    width: 80%;
+  }
+}
+@media (max-width: 480px){
+  .sign .main .form .box{
+    width: 100%;
+  }
 }
