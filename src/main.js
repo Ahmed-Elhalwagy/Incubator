@@ -26,7 +26,7 @@ const profession = document.getElementsByName("profession")[0];
 const errorEl = document.getElementById("error");
 const sign_up_form = document.getElementById("sign_up")
 
-const errors = []
+let errors = [];
 
 sign_up_form.addEventListener('submit', e => {
     errors = []

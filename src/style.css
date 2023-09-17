@@ -504,6 +504,9 @@ section .main .products-container .box{
 }
 }
 
+.sign{
+  height: 75vh;
+}
 
 .sign .main .form {
   display: flex;
