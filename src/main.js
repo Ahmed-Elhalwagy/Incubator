@@ -25,21 +25,21 @@ const profession = document.getElementsByName("profession")[0];
 
 const errorEl = document.getElementById("error");
 const sign_up_form = document.getElementById("sign_up")
-
+const login_form = document.getElementById("login_form")
 let errors = [];
 
-sign_up_form.addEventListener('submit', e => {
-    errors = []
+sign_up_form?.addEventListener('submit', e => {
     e.preventDefault();
+    errors = []
 
     if (name.value === "" || name.value == null) {
-        errors.push("Name is Required")
+        errors.push("Name field is Required")
     }
     if (email.value === "" || email.value == null) {
-        errors.push("Email is Required")
+        errors.push("Email field is Required")
     }
     if (password.value === "" || password.value == null) {
-        errors.push("Password is Required")
+        errors.push("Password field is Required")
     }
     if (password.value.length < 6) {
         errors.push("Password Must be longer than 6 characters")
@@ -48,7 +48,7 @@ sign_up_form.addEventListener('submit', e => {
         errors.push("Password Must be less than 20 characters")
     }
     if (profession.value === "" || profession.value == null) {
-        errors.push("Profession is Required")
+        errors.push("Profession field is Required")
     }
 
     if (errors.length > 0) {
@@ -57,3 +57,18 @@ sign_up_form.addEventListener('submit', e => {
 
 })
 
+login_form?.addEventListener('submit', e => {
+    e.preventDefault();  
+
+    errors = []
+
+    if (email.value === "" || email.value == null) {
+        errors.push("Email field is Required")
+    }
+    if (password.value === "" || password.value == null) {
+        errors.push("Password field is Required")
+    }
+    if (errors.length > 0) {
+        errorEl.innerText = errors.join(", ")
+    }
+})

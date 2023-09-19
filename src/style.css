@@ -551,3 +551,7 @@ section .main .products-container .box{
     width: 100%;
   }
 }
+
+#error {
+  color: #e63946;
+}
