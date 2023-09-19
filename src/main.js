@@ -52,7 +52,15 @@ sign_up_form?.addEventListener('submit', e => {
     }
 
     if (errors.length > 0) {
-        errorEl.innerText = errors.join(", ")
+        const ul = document.createElement('ul');
+        ul.id = "errors-list";
+        for(let i = 0; i < errors.length; i++){
+            const li = document.createElement("li");
+            li.textContent = errors[i]
+            ul.appendChild(li)
+        }
+        sign_up_form.insertAdjacentElement("afterend", ul)
+    
     }
 
 })
@@ -69,6 +77,13 @@ login_form?.addEventListener('submit', e => {
         errors.push("Password field is Required")
     }
     if (errors.length > 0) {
-        errorEl.innerText = errors.join(", ")
+        const ul = document.createElement('ul');
+        ul.id = "errors-list";
+        for(let i = 0; i < errors.length; i++){
+            const li = document.createElement("li");
+            li.textContent = errors[i]
+            ul.appendChild(li)
+        }
+        login_form.insertAdjacentElement("afterend", ul)
     }
 })

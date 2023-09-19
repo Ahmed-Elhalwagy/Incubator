@@ -552,6 +552,12 @@ section .main .products-container .box{
   }
 }
 
-#error {
+#errors-list {
+  list-style-type: none;
   color: #e63946;
+  margin: 10px;
+  text-align: center;
+}
+#errors-list li {
+  padding: 2px;
 }
